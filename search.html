@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Browse eBooks — CampusFunda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="assets/style.css" rel="stylesheet" />
+</head>
+
+<body data-page="search">
+  <div id="cf-header"></div>
+
+  <section class="cf-section" style="padding: 50px 0 30px">
+    <div class="container">
+      <div class="cf-breadcrumb">
+        <a href="index.html">Home</a> › <span>eBooks</span>
+      </div>
+      <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+        <div>
+          <span class="section-eyebrow">Library</span>
+          <h1 class="section-title">
+            Find your <span class="serif-accent">next</span> textbook.
+          </h1>
+          <p style="color: var(--cf-muted); max-width: 560px">
+            Over 30,000 titles across engineering, commerce and applied
+            sciences — from leading Indian publishers.
+          </p>
+        </div>
+      </div>
+
+      <!-- Search bar -->
+      <form class="d-flex gap-2 mb-4" onsubmit="event.preventDefault()" data-testid="search-form">
+        <div class="flex-grow-1 position-relative">
+          <i class="bi bi-search position-absolute" style="
+                left: 18px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: var(--cf-muted);
+              "></i>
+          <input class="form-control form-control-lg" style="
+                padding-left: 46px;
+                border: 1.5px solid var(--cf-navy);
+                border-radius: 999px;
+                background: #fff;
+              " placeholder="Search by title, author, subject or university…" data-testid="search-input" />
+        </div>
+        <button class="btn-cf btn-cf-lime" data-testid="search-submit-btn">
+          Search
+        </button>
+      </form>
+
+      <!-- Chips -->
+      <div class="d-flex gap-2 flex-wrap mb-5">
+        <span class="cf-chip active">All</span>
+        <span class="cf-chip">Computer Engineering</span>
+        <span class="cf-chip">Mechanical</span>
+        <span class="cf-chip">Civil</span>
+        <span class="cf-chip">Electrical</span>
+        <span class="cf-chip">Electronics</span>
+        <span class="cf-chip">IT</span>
+        <span class="cf-chip">Management</span>
+        <span class="cf-chip">First Year</span>
+      </div>
+
+      <div class="row g-4">
+        <!-- Sidebar -->
+        <div class="col-lg-3">
+          <div class="p-4 mb-3" style="
+                background: var(--cf-surface);
+                border: 1.5px solid var(--cf-border);
+                border-radius: 18px;
+              ">
+            <h6 class="mb-3" style="
+                  font-size: 12px;
+                  letter-spacing: 0.2em;
+                  text-transform: uppercase;
+                  color: var(--cf-coral);
+                ">
+              University
+            </h6>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="u1" checked /><label class="form-check-label"
+                for="u1">Pune University</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="u2" /><label class="form-check-label" for="u2">Mumbai
+                University</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="u3" /><label class="form-check-label" for="u3">GTU
+                Gujarat</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="u4" /><label class="form-check-label"
+                for="u4">MSBTE</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="u5" /><label class="form-check-label"
+                for="u5">DBATU</label>
+            </div>
+          </div>
+          <div class="p-4 mb-3" style="
+                background: var(--cf-surface);
+                border: 1.5px solid var(--cf-border);
+                border-radius: 18px;
+              ">
+            <h6 class="mb-3" style="
+                  font-size: 12px;
+                  letter-spacing: 0.2em;
+                  text-transform: uppercase;
+                  color: var(--cf-coral);
+                ">
+              Price
+            </h6>
+            <input type="range" class="form-range" min="0" max="1000" value="500" />
+            <div class="d-flex justify-content-between">
+              <small>₹0</small><small>₹1000+</small>
+            </div>
+          </div>
+          <div class="p-4" style="
+                background: var(--cf-surface-2);
+                color: var(--cf-text);
+                border-radius: 18px;
+              ">
+            <h6 class="mb-2" style="
+                  color: var(--cf-lime);
+                  font-size: 12px;
+                  letter-spacing: 0.2em;
+                  text-transform: uppercase;
+                ">
+              Pro tip
+            </h6>
+            <p class="mb-3" style="font-size: 14px; color: rgba(245, 241, 232, 0.78)">
+              Add 3 titles to cart and save 15% automatically.
+            </p>
+            <a href="cart.html" class="btn-cf btn-cf-lime" style="padding: 8px 16px; font-size: 13px">See combos</a>
+          </div>
+        </div>
+
+        <!-- Grid -->
+        <div class="col-lg-9">
+          <div class="d-flex justify-content-between mb-3">
+            <div style="color: var(--cf-muted); font-size: 14px">
+              <strong>2,340</strong> results
+            </div>
+            <select class="form-select form-select-sm" style="max-width: 200px; border: 1.5px solid var(--cf-navy)">
+              <option>Relevance</option>
+              <option>Price: low to high</option>
+              <option>Price: high to low</option>
+              <option>Newest</option>
+            </select>
+          </div>
+
+          <div class="row g-4" id="book-grid"></div>
+          <nav class="mt-5 d-flex justify-content-center">
+            <ul class="pagination">
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">…</a></li>
+              <li class="page-item"><a class="page-link" href="#">78</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="cf-footer"></div>
+
+  <div id="root"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/partials.js"></script>
+  <script>
+    // Generate book grid
+    const books = [
+      {
+        t: "Water Resources Engg.",
+        a: "Nishant A. Upadhye",
+        c: "Civil",
+        p: 150,
+        w: 200,
+        tag: "-25%",
+        img: "https://techknowledgebooks.com/wp-content/uploads/2024/01/WATER-RESOURCES-ENGINEERING-ME216C-scaled.jpg"
+      },
+      {
+        t: "Theory of Computation",
+        a: "Dilip Kumar Sultania",
+        c: "CS",
+        p: 296,
+        w: 395,
+        tag: "Bestseller",
+        img: "https://techknowledgebooks.com/wp-content/uploads/2024/01/Theory-of-Computation-PO152C.jpg"
+      },
+      {
+        t: "Database Management Systems",
+        a: "Prof. Mahesh Mali",
+        c: "IT",
+        p: 296,
+        w: 395,
+        tag: "Hot",
+        img: "https://techknowledgebooks.com/wp-content/uploads/2020/07/Database-Management-System-1-scaled.jpg"
+      },
+      {
+        t: "Microcontroller 8051",
+        a: "H.G. Narula",
+        c: "ECE",
+        p: 349,
+        w: 465,
+        tag: "New",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_pBj6V8occSYlgQ0HEGEvt4GrYLj_F8VQtw&s"
+      },
+      {
+        t: "Engineering Mathematics III",
+        a: "S. R. Shetty",
+        c: "Core",
+        p: 220,
+        w: 280,
+        tag: "",
+        img: "https://m.media-amazon.com/images/I/81mCwZK-+aL._AC_UF1000,1000_QL80_.jpg"
+      },
+      {
+        t: "Data Structures & Algorithms",
+        a: "Anita Deshmukh",
+        c: "CS",
+        p: 320,
+        w: 420,
+        tag: "-20%",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhrVegr1f0mm8G6I-Sc9oY0wj-2G3YF14cJA&s"
+      },
+      {
+        t: "Operating Systems",
+        a: "R. Kulkarni",
+        c: "CS",
+        p: 280,
+        w: 360,
+        tag: "",
+        img: "https://techknowledgebooks.com/wp-content/uploads/2024/01/Operating-Systems-PO153C-scaled.jpg"
+      },
+      {
+        t: "Thermodynamics",
+        a: "Dr. P. Joshi",
+        c: "Mech",
+        p: 260,
+        w: 340,
+        tag: "New",
+        img: "https://neelkanthbooks.com/wp-content/uploads/2022/01/41XBAtkizmL._SX387_BO1204203200_.jpg"
+      },
+      {
+        t: "Machine Learning Basics",
+        a: "Khushboo Shah",
+        c: "AI",
+        p: 390,
+        w: 490,
+        tag: "Trending",
+        img: "https://techknowledgebooks.com/wp-content/uploads/2024/01/Machine-LearningMO235B-scaled.jpg"
+      },
+      {
+        t: "Structural Analysis",
+        a: "Vivek Patil",
+        c: "Civil",
+        p: 310,
+        w: 410,
+        tag: "",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDaYO_lONxTX5WfQA2CB3n82xN6mIay3UB1g&s"
+      },
+      {
+        t: "Industrial Engineering",
+        a: "Anand Bewoor",
+        c: "Mech",
+        p: 245,
+        w: 320,
+        tag: "",
+        img: "https://techknowledgebooks.com/wp-content/uploads/2024/01/Industrial-EngineeringPO234B-scaled.jpg"
+      },
+      {
+        t: "Signals & Systems",
+        a: "J.S. katre",
+        c: "ECE",
+        p: 275,
+        w: 355,
+        tag: "-22%",
+        img: "https://techknowledgebooks.com/wp-content/uploads/2021/03/SIGNALS-SYSTEMSGE64C-1-scaled.jpg"
+      },
+    ];
+    const grid = document.getElementById("book-grid");
+    grid.innerHTML = books
+      .map(
+        (b) => `
+      <div class="col-6 col-md-4">
+        <a href="book-detail.html" class="cf-book-card d-block text-decoration-none">
+          <div class="cf-book-cover">${b.tag ? `<span class="tag">${b.tag}</span>` : ""}
+            <img src="${b.img}" alt="${b.t}" class="cf-book-img" /></div>
+          <div class="cf-book-body">
+            <span class="cf-book-cat">${b.c}</span>
+            <h5 class="cf-book-title">${b.t}</h5>
+            <span class="cf-book-author">${b.a}</span>
+            <div class="cf-book-price"><span class="now">₹${b.p}</span><span class="was">₹${b.w}</span></div>
+          </div>
+        </a>
+      </div>`,
+      )
+      .join("");
+  </script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
+    integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg=="
+    data-cf-beacon='{"version":"2024.11.0","token":"7f7b0fd8732c4326aae4b9d58d5c514a","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

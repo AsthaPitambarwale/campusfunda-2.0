@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Institutes — CampusFunda</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="assets/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="cf-header"></div>
+    <section class="cf-section" style="padding: 50px 0 30px">
+      <div class="container">
+        <div class="cf-breadcrumb">
+          <a href="index.html">Home</a> › <span>Institutes</span>
+        </div>
+        <span class="section-eyebrow">Universities & boards</span>
+        <h1 class="section-title mb-4">
+          Content mapped to <span class="serif-accent">your</span> syllabus.
+        </h1>
+        <p style="color: var(--cf-muted); max-width: 620px">
+          We cover the biggest technical universities and state boards in India
+          — with content verified against the latest syllabus.
+        </p>
+
+        <div class="row g-4 mt-4" id="instGrid"></div>
+      </div>
+    </section>
+    <div id="cf-footer"></div>
+    <div id="root"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/partials.js"></script>
+    <script>
+      const inst = [
+        {
+          n: "Pune University",
+          s: "SPPU",
+          r: "Maharashtra",
+          cnt: "1,200+ resources",
+        },
+        {
+          n: "Mumbai University",
+          s: "MU",
+          r: "Maharashtra",
+          cnt: "980+ resources",
+        },
+        {
+          n: "Gujarat Technological University",
+          s: "GTU",
+          r: "Gujarat",
+          cnt: "840+ resources",
+        },
+        {
+          n: "MSBTE (Diploma)",
+          s: "MSBTE",
+          r: "Maharashtra",
+          cnt: "1,100+ resources",
+        },
+        {
+          n: "Dr. Babasaheb Ambedkar Tech Univ.",
+          s: "DBATU",
+          r: "Maharashtra",
+          cnt: "520+ resources",
+        },
+        {
+          n: "RGPV Bhopal",
+          s: "RGPV",
+          r: "Madhya Pradesh",
+          cnt: "410+ resources",
+        },
+        {
+          n: "Anna University",
+          s: "AU",
+          r: "Tamil Nadu",
+          cnt: "680+ resources",
+        },
+        { n: "VTU Belgaum", s: "VTU", r: "Karnataka", cnt: "550+ resources" },
+      ];
+      document.getElementById("instGrid").innerHTML = inst
+        .map(
+          (i) => `
+      <div class="col-md-6 col-lg-4">
+        <a href="search.html" class="cf-cat-card d-block text-decoration-none">
+          <div class="d-flex justify-content-between align-items-start">
+            <div class="icon-box"><i class="bi bi-mortarboard"></i></div>
+            <span class="cf-chip" style="font-size:11px">${i.r}</span>
+          </div>
+          <div><h4>${i.n}</h4><p>${i.cnt} · Code: <strong>${i.s}</strong></p></div>
+          <div class="go">View resources <i class="bi bi-arrow-right"></i></div>
+        </a>
+      </div>`,
+        )
+        .join("");
+    </script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
+      integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg=="
+      data-cf-beacon='{"version":"2024.11.0","token":"7f7b0fd8732c4326aae4b9d58d5c514a","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

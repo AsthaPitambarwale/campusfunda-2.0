@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Authors — CampusFunda</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="assets/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="cf-header"></div>
+    <section class="cf-section" style="padding: 50px 0 30px">
+      <div class="container">
+        <div class="cf-breadcrumb">
+          <a href="index.html">Home</a> › <span>Authors</span>
+        </div>
+        <span class="section-eyebrow">Meet</span>
+        <h1 class="section-title mb-4">
+          Authors who make <span class="serif-accent">tough</span> topics click.
+        </h1>
+        <p style="color: var(--cf-muted); max-width: 640px">
+          Our authors are classroom teachers first, authors second — which is
+          why their writing feels like sitting in a great lecture.
+        </p>
+
+        <div class="row g-4 mt-4" id="authorGrid"></div>
+      </div>
+    </section>
+    <div id="cf-footer"></div>
+    <div id="root"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/partials.js"></script>
+    <script>
+      const authors = [
+        {
+          n: "Harish G. Narula",
+          b: "Electronics & Embedded",
+          books: 7,
+          init: "HN",
+          col: "#ff6b4a",
+        },
+        {
+          n: "Dilip Kumar Sultania",
+          b: "Theory of Computation",
+          books: 4,
+          init: "DS",
+          col: "#d7ff3a",
+        },
+        {
+          n: "Prof. Mahesh Mali",
+          b: "Database Systems",
+          books: 3,
+          init: "MM",
+          col: "#13294b",
+        },
+        {
+          n: "Khushboo Shah",
+          b: "Machine Learning",
+          books: 5,
+          init: "KS",
+          col: "#ff6b4a",
+        },
+        {
+          n: "Anand Bewoor",
+          b: "Industrial Engineering",
+          books: 6,
+          init: "AB",
+          col: "#d7ff3a",
+        },
+        {
+          n: "Kavita Sultanpure",
+          b: "Information Storage",
+          books: 2,
+          init: "KP",
+          col: "#13294b",
+        },
+        {
+          n: "Monali Shetty",
+          b: "Signals & Systems",
+          books: 4,
+          init: "MS",
+          col: "#ff6b4a",
+        },
+        {
+          n: "Nishant A. Upadhye",
+          b: "Water Resources",
+          books: 2,
+          init: "NU",
+          col: "#d7ff3a",
+        },
+      ];
+      document.getElementById("authorGrid").innerHTML = authors
+        .map(
+          (a) => `
+      <div class="col-md-6 col-lg-3">
+        <div class="cf-cat-card text-center">
+          <div style="width:80px;height:80px;border-radius:50%;background:${a.col};color:${a.col === "#d7ff3a" ? "#0b1f3a" : "#fff"};display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque';font-size:28px;font-weight:800;margin:0 auto 12px;border:1.5px solid var(--cf-navy)">${a.init}</div>
+          <div><h4 style="font-size:18px">${a.n}</h4><p>${a.b}</p></div>
+          <div class="go">${a.books} titles →</div>
+        </div>
+      </div>`,
+        )
+        .join("");
+    </script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
+      integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg=="
+      data-cf-beacon='{"version":"2024.11.0","token":"7f7b0fd8732c4326aae4b9d58d5c514a","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
